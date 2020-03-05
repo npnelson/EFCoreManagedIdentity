@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using NETToolBox.EFCoreManagedIdentity;
 using System.Diagnostics.CodeAnalysis;
 
-namespace NETToolBox.EFCoreManagedIdentity
+namespace Microsoft.EntityFrameworkCore
 {
     public static class ManagedIdentityConnectionInterceptorExtensions
     {
