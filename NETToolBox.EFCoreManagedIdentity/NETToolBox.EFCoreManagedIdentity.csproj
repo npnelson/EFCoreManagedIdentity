@@ -3,6 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <Description>Use this ManagedIdentity Interceptor for EFCore/SQL until EFCore supports it natively</Description>
+    <PackageLicenseUrl>https://github.com/npnelson/EFCoreManagedIdentity/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/npnelson/EFCoreManagedIdentity</PackageProjectUrl>
+    <Authors>npnelson</Authors>
   </PropertyGroup>
 
   <ItemGroup>
