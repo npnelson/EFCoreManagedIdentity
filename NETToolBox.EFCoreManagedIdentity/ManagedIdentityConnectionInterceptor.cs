@@ -26,6 +26,10 @@ namespace NETToolBox.EFCoreManagedIdentity
             _tokenProvider = new AzureServiceTokenProvider();
         }
 
+        public override InterceptionResult ConnectionOpening(DbConnection connection, ConnectionEventData eventData, InterceptionResult result)
+        {
+            return ConnectionOpeningAsync(connection, eventData, result).GetAwaiter().GetResult();
+        }
         public override async Task<InterceptionResult> ConnectionOpeningAsync(
             DbConnection connection,
             ConnectionEventData eventData,
@@ -37,7 +41,6 @@ namespace NETToolBox.EFCoreManagedIdentity
             var sqlConnection = (SqlConnection)connection;
             string accessToken = await GetAccessTokenAsync().ConfigureAwait(false);
             sqlConnection.AccessToken = accessToken;
-
             return result;
         }
 
