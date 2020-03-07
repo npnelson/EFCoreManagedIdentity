@@ -18,6 +18,10 @@ namespace NETToolBox.EFCoreManagedIdentity
             {
                 _tenantId = null;
             }
+            else
+            {
+                _tenantId = tenantID;
+            }
 
             _tokenProvider = new AzureServiceTokenProvider();
         }
