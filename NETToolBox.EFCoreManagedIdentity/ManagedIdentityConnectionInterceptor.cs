@@ -30,7 +30,7 @@ namespace NETToolBox.EFCoreManagedIdentity
         {
             return ConnectionOpeningAsync(connection, eventData, result).GetAwaiter().GetResult();
         }
-        public override async Task<InterceptionResult> ConnectionOpeningAsync(
+        public override async ValueTask<InterceptionResult> ConnectionOpeningAsync(
             DbConnection connection,
             ConnectionEventData eventData,
             InterceptionResult result,
